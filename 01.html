@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel"stylesheet" href="css/reset.css">
+    <style>
+        .box-container {
+            display: flex;  /*나란히 정렬*/
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            background: rgba(255, 255, 0, 0.7);
+        }
+        .box:hover {    /*마우스를 올리면 변형되도록 처리하는 것.*/
+            /* transform: scale(2) rotate(15deg) skewY(36deg) translate(30px, 10px);     */
+            transform: scale(1.5);
+            transform-origin: left top;
+            /*transform: 크기 조정 (1은 100% 크기임, 2는 2배 크기, 소수점 가능)*/
+            /*rotate: 회전 (deg : 앞에 숫자가 없는 디폴트 각도는 360도 )*/
+            /*skew: 비틀기 (skew - 수평 비틀기, skewY - 수직 비틀기 || 음수로 반대 비틀기 가능)*/
+            /*translate(X축 이동, Y축 이동): 이동 (translateX, translateY, translateZ로 축을 따로 쓸 수도 있음. Z축은 css 3d를 배운 뒤에 사용 가능), || 음수 사용 가능*/
+            /*transform-origin: .. : 기준점 (디폴트 중앙), 키워드에 따라 기준점을 바꾼다. || 백그라운드 포지션과 동일 */
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Transform</h1>
+    <p>
+        Lorem ipsum ...
+    </p>
+    <div class = "box-container">
+        <div class = box>A</div>
+        <div class = box>B</div>
+        <div class = box>C</div>
+        <div class = box>D</div>
+        <div class = box>E</div>
+    </div>
+    <p>
+        Lorem ipsum ...
+    </p>
+</body>
+</html>
